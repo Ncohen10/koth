@@ -1,0 +1,83 @@
+{
+	"textures": [
+		{
+			"image": "player_shoot_shotgun.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 779,
+				"h": 157
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-shoot_shotgun_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-shoot_shotgun_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 35,
+						"w": 257,
+						"h": 155
+					},
+					"frame": {
+						"x": 264,
+						"y": 1,
+						"w": 257,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-shoot_shotgun_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 312,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 35,
+						"w": 255,
+						"h": 155
+					},
+					"frame": {
+						"x": 523,
+						"y": 1,
+						"w": 255,
+						"h": 155
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:998db56dbc59937c86287cb4e7e24ca3:aa0e3ccebde84d9de89557c5999e854b:5968bc8e05dc4601589f75011690fab4$"
+	}
+}

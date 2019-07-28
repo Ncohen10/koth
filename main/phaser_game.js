@@ -1,3 +1,5 @@
+//TODO - preload and create all pistol and shotgun anims.
+
 
 var config = {
     type: Phaser.AUTO,
@@ -34,6 +36,19 @@ function preload() {
     this.load.multiatlas('player_attack_knife',
         './assets/json_anims/knife_attack.json',
         './assets/tp_sprite_sheets');
+    this.load.multiatlas('player_idle_rifle',
+        './assets/json_anims/rifle_idle.json',
+        './assets/tp_sprite_sheets');
+    this.load.multiatlas('player_move_rifle',
+        './assets/json_anims/rifle_move.json',
+        './assets/tp_sprite_sheets');
+    this.load.multiatlas('player_shoot_rifle',
+        './assets/json_anims/rifle_shoot.json',
+        './assets/tp_sprite_sheets');
+    this.load.multiatlas('player_reload_rifle',
+        './assets/json_anims/rifle_reload.json',
+        './assets/tp_sprite_sheets')
+
 
 }
 
@@ -46,11 +61,14 @@ function create() {
         .setVelocity(0, 0);
 
 
-    var idleKnifeFrames = this.anims.generateFrameNames('player_idle_knife');
-    var moveKnifeFrames = this.anims.generateFrameNames('player_move_knife');
-    var attackKnifeFrames = this.anims.generateFrameNames('player_attack_knife');
+    let idleKnifeFrames = this.anims.generateFrameNames('player_idle_knife'),
+        moveKnifeFrames = this.anims.generateFrameNames('player_move_knife'),
+        attackKnifeFrames = this.anims.generateFrameNames('player_attack_knife'),
+        idleRifleFrames = this.anims.generateFrameNames('player_idle_rifle'),
+        moveRifleFrames = this.anims.generateFrameNames('player_move_rifle'),
+        shootRifleFrames = this.anims.generateFrameNames('player_shoot_rifle'),
+        reloadRifleFrames = this.anims.generateFrameNames('player_reload_rifle');
 
-// TODO - Fix knife attack animation: player.play('knife_attack')
 
     this.anims.create({
         key: 'knife_move',
@@ -70,6 +88,31 @@ function create() {
         frameRate: 25,
         repeat: 0
     });
+    this.anims.create({
+        key: "rifle_idle",
+        frames: idleRifleFrames,
+        frameRate: 25,
+        repeat: -1
+    });
+    this.anims.create({
+        key: "rifle_move",
+        frames: moveRifleFrames,
+        frameRate: 25,
+        repeat: -1
+    });
+    this.anims.create({
+        key: "rifle_shoot",
+        frames: shootRifleFrames,
+        frameRate: 25,
+        repeat: -1
+    });
+    this.anims.create({
+        key: "rifle_reload",
+        frames: reloadRifleFrames,
+        frameRate: 25,
+        repeat: -1
+    });
+
 
 
 }

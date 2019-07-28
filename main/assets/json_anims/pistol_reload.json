@@ -1,0 +1,335 @@
+{
+	"textures": [
+		{
+			"image": "player_reload_pistol.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 428,
+				"h": 1307
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-reload_handgun_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 40,
+						"w": 216,
+						"h": 165
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 216,
+						"h": 165
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 39,
+						"w": 208,
+						"h": 174
+					},
+					"frame": {
+						"x": 219,
+						"y": 1,
+						"w": 208,
+						"h": 174
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 40,
+						"w": 214,
+						"h": 162
+					},
+					"frame": {
+						"x": 1,
+						"y": 168,
+						"w": 214,
+						"h": 162
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 40,
+						"w": 210,
+						"h": 171
+					},
+					"frame": {
+						"x": 217,
+						"y": 177,
+						"w": 210,
+						"h": 171
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 39,
+						"w": 214,
+						"h": 160
+					},
+					"frame": {
+						"x": 1,
+						"y": 332,
+						"w": 214,
+						"h": 160
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 38,
+						"w": 210,
+						"h": 163
+					},
+					"frame": {
+						"x": 217,
+						"y": 350,
+						"w": 210,
+						"h": 163
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 40,
+						"w": 213,
+						"h": 168
+					},
+					"frame": {
+						"x": 1,
+						"y": 494,
+						"w": 213,
+						"h": 168
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 38,
+						"w": 211,
+						"h": 159
+					},
+					"frame": {
+						"x": 216,
+						"y": 515,
+						"w": 211,
+						"h": 159
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 39,
+						"w": 212,
+						"h": 158
+					},
+					"frame": {
+						"x": 1,
+						"y": 664,
+						"w": 212,
+						"h": 158
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 38,
+						"w": 212,
+						"h": 157
+					},
+					"frame": {
+						"x": 215,
+						"y": 676,
+						"w": 212,
+						"h": 157
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 38,
+						"w": 212,
+						"h": 156
+					},
+					"frame": {
+						"x": 1,
+						"y": 824,
+						"w": 212,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 38,
+						"w": 212,
+						"h": 156
+					},
+					"frame": {
+						"x": 215,
+						"y": 835,
+						"w": 212,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 38,
+						"w": 211,
+						"h": 156
+					},
+					"frame": {
+						"x": 1,
+						"y": 982,
+						"w": 211,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 39,
+						"w": 209,
+						"h": 170
+					},
+					"frame": {
+						"x": 214,
+						"y": 993,
+						"w": 209,
+						"h": 170
+					}
+				},
+				{
+					"filename": "survivor-reload_handgun_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 260,
+						"h": 230
+					},
+					"spriteSourceSize": {
+						"x": 36,
+						"y": 39,
+						"w": 209,
+						"h": 166
+					},
+					"frame": {
+						"x": 1,
+						"y": 1140,
+						"w": 209,
+						"h": 166
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:de52ff1a31e75b228acb0e2c2625c729:feb25e30188c396ada0fd59beecc8118:3f100650d22d1555caa317515bbd5a58$"
+	}
+}

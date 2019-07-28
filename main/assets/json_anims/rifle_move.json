@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "player_move_rifle.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1831,
+				"h": 473
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "survivor-move_rifle_10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 32,
+						"w": 258,
+						"h": 157
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 258,
+						"h": 157
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 160,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 261,
+						"y": 1,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 261,
+						"h": 155
+					},
+					"frame": {
+						"x": 1,
+						"y": 317,
+						"w": 261,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 264,
+						"y": 158,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 524,
+						"y": 1,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 264,
+						"y": 316,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 525,
+						"y": 158,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 525,
+						"y": 316,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 786,
+						"y": 1,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 33,
+						"w": 259,
+						"h": 156
+					},
+					"frame": {
+						"x": 786,
+						"y": 159,
+						"w": 259,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 786,
+						"y": 317,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1047,
+						"y": 1,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1047,
+						"y": 158,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 35,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1048,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 34,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1309,
+						"y": 1,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1309,
+						"y": 158,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 34,
+						"w": 260,
+						"h": 155
+					},
+					"frame": {
+						"x": 1310,
+						"y": 315,
+						"w": 260,
+						"h": 155
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 258,
+						"h": 156
+					},
+					"frame": {
+						"x": 1571,
+						"y": 1,
+						"w": 258,
+						"h": 156
+					}
+				},
+				{
+					"filename": "survivor-move_rifle_8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 313,
+						"h": 206
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 33,
+						"w": 258,
+						"h": 156
+					},
+					"frame": {
+						"x": 1572,
+						"y": 159,
+						"w": 258,
+						"h": 156
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:127a4653c1e97b03446e58ac2ee94605:be0b2cc923b292c3ea3db1fd8fefd27b:7e2a80896f00a62f3f7272e5b9e14dc0$"
+	}
+}
