@@ -18,11 +18,11 @@ var config = {
 };
 
 var game = new Phaser.Game(config);
-
 var player;
 
 
 function preload() {
+
     this.load.image('init_player', './assets/player/knife/idle/survivor-idle_knife_0.png');
 
     this.load.multiatlas('player_idle_knife',
@@ -32,7 +32,9 @@ function preload() {
         './assets/json_anims/knife_move.json',
         './assets/tp_sprite_sheets');
     this.load.multiatlas('player_attack_knife',
-        './assets/json_anims/knife_attack.json');
+        './assets/json_anims/knife_attack.json',
+        './assets/tp_sprite_sheets');
+
 }
 
 
@@ -48,7 +50,7 @@ function create() {
     var moveKnifeFrames = this.anims.generateFrameNames('player_move_knife');
     var attackKnifeFrames = this.anims.generateFrameNames('player_attack_knife');
 
-
+// TODO - Fix knife attack animation: player.play('knife_attack')
 
     this.anims.create({
         key: 'knife_move',
@@ -59,14 +61,14 @@ function create() {
     this.anims.create({
         key: 'knife_idle',
         frames: idleKnifeFrames,
-        frameRate: 25,
+        frameRate: 20,
         repeat: -1
     });
     this.anims.create({
-        key: 'knife_move',
+        key: 'knife_attack',
         frames: attackKnifeFrames,
         frameRate: 25,
-        repeat: -1
+        repeat: 0
     });
 
 
@@ -74,26 +76,32 @@ function create() {
 
 
 function update() {
-
+    
+    // Add mouse and keyboard controls.
     var cursors = this.input.keyboard.createCursorKeys();
+    var pointer = this.input.activePointer;
+    var keys = this.input.keyboard.addKeys('W,S,A,D');
 
 
-    // move with arrow keys
-    if (cursors.left.isDown){
+    // move with arrow keys or WASD
+    if (cursors.left.isDown || keys.A.isDown){
         player.setVelocityX(-160);
         player.play('knife_move', true);
     }
-    else if (cursors.right.isDown){
+    else if (cursors.right.isDown || keys.D.isDown){
         player.setVelocityX(160);
         player.play('knife_move', true);
     }
-    else if (cursors.up.isDown){
+    else if (cursors.up.isDown || keys.W.isDown){
         player.setVelocityY(-160);
         player.play('knife_move', true);
     }
-    else if(cursors.down.isDown){
+    else if(cursors.down.isDown || keys.S.isDown){
         player.setVelocityY(160);
         player.play('knife_move', true);
+    }
+    else if (pointer.isDown){   // If left mouse clicked
+        player.play('knife_attack', true);
     }
     else{
         player.setVelocity(0,0);
