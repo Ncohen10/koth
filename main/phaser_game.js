@@ -1,11 +1,6 @@
 import player_stats from './model/player_stats.js'
 
 
-//TODO - preload and create all pistol and shotgun anims.
-
-// Make game work for one player first.
-//
-
 var config = {
     type: Phaser.AUTO,
     width: window.innerWidth,
@@ -24,9 +19,10 @@ var config = {
     }
 };
 
-var game = new Phaser.Game(config);
-var player_sprite;
-var player_info;
+const game = new Phaser.Game(config);
+let player_sprite;
+let player_info;
+let player_physics;
 
 
 function preload() {
@@ -92,99 +88,95 @@ function create() {
     player_info = new player_stats('placeholder', player_sprite.x, player_sprite.y);
 
     this.anims.create({
-        key: 'knife_move',
+        key: 'KnifeMove',
         frames: this.anims.generateFrameNames('player_move_knife'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: 'knife_idle',
+        key: 'KnifeIdle',
         frames: this.anims.generateFrameNames('player_idle_knife'),
         frameRate: 20,
         repeat: -1
     });
     this.anims.create({
-        key: 'knife_attack',
+        key: 'KnifeAttack',
         frames: this.anims.generateFrameNames('player_attack_knife'),
         frameRate: 25,
         repeat: 0
     });
     this.anims.create({
-        key: "rifle_idle",
+        key: "RifleIdle",
         frames: this.anims.generateFrameNames('player_idle_rifle'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "rifle_move",
+        key: "RifleMove",
         frames: this.anims.generateFrameNames('player_move_rifle'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "rifle_shoot",
+        key: "RifleShoot",
         frames: this.anims.generateFrameNames('player_shoot_rifle'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "rifle_reload",
+        key: "RifleReload",
         frames: this.anims.generateFrameNames('player_reload_rifle'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "pistol_idle",
+        key: "PistolIdle",
         frames: this.anims.generateFrameNames('player_idle_pistol'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "pistol_move",
+        key: "PistolMove",
         frames: this.anims.generateFrameNames('player_move_pistol'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "pistol_shoot",
+        key: "PistolShoot",
         frames: this.anims.generateFrameNames('player_shoot_pistol'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "pistol_reload",
+        key: "PistolReload",
         frames: this.anims.generateFrameNames('player_reload_pistol'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "shotgun_idle",
+        key: "ShotgunIdle",
         frames: this.anims.generateFrameNames('player_idle_shotgun'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "shotgun_move",
+        key: "ShotgunMove",
         frames: this.anims.generateFrameNames('player_move_shotgun'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "shotgun_shoot",
+        key: "ShotgunShoot",
         frames: this.anims.generateFrameNames('player_shoot_shotgun'),
         frameRate: 25,
         repeat: -1
     });
     this.anims.create({
-        key: "shotgun_reload",
+        key: "ShotgunReload",
         frames: this.anims.generateFrameNames('player_reload_shotgun'),
         frameRate: 25,
         repeat: -1
     });
-
-
-    //TODO: Make map large (procedural generation perhaps)
-    // TODO: Randomly spawn weapons on map
 
 }
 
@@ -192,47 +184,72 @@ function create() {
 function update() {
     
     // Add mouse and keyboard controls.
-    var cursors = this.input.keyboard.createCursorKeys();
-    var pointer = this.input.activePointer;
-    var keys = this.input.keyboard.addKeys('W,A,S,D');
+    const cursors = this.input.keyboard.createCursorKeys();
+    const pointer = this.input.activePointer;
+    const keys = this.input.keyboard.addKeys('W,A,S,D');
+    const speed = 100;
 
 
-    // move with arrow keys or WASD
+    // Reset velocity to 0 if no movement keys pressed
+    player_sprite.body.setVelocity(0);
+    // player_sprite.play(player_info.weapon + player_info.action, true);
+
+
+    // Horizontal movement
     if (cursors.left.isDown || keys.A.isDown) {
-        player_sprite.setVelocityX(-160);
-        player_info.action = "move";
-        player_sprite.play(player_info.weapon + player_info.action, true);
+        player_info.action = "Move";
+        player_sprite.body.setVelocityX(-speed);
     }
     else if (cursors.right.isDown || keys.D.isDown) {
-        player_sprite.setVelocityX(160);
-        player_info.action = "move";
+        player_info.action = "Move";
+        player_sprite.body.setVelocityX(speed);
+    }
+
+    // Vertical movement
+    if (cursors.up.isDown || keys.W.isDown) {
+        player_info.action = "Move";
+        player_sprite.body.setVelocityY(-speed);
+    }
+    else if(cursors.down.isDown || keys.S.isDown) {
+        player_info.action = "Move";
+        player_sprite.body.setVelocityY(speed);
+    }
+
+    // Action animations
+    if (pointer.isDown){
+        player_info.action = "Attack";
+        player_sprite.play(player_info.weapon + player_info.action, true);
+    }
+    else if (cursors.left.isDown || keys.A.isDown) {
+        player_info.action = "Move";
+    }
+    else if (cursors.right.isDown || keys.D.isDown) {
+        player_info.action = "Move";
         player_sprite.play(player_info.weapon + player_info.action, true);
     }
     else if (cursors.up.isDown || keys.W.isDown) {
-        player_sprite.setVelocityY(-160);
-        player_info.action = "move";
+        player_info.action = "Move";
         player_sprite.play(player_info.weapon + player_info.action, true);
     }
     else if(cursors.down.isDown || keys.S.isDown) {
-        player_sprite.setVelocityY(160);
-        player_info.action = "move";
-        player_sprite.play(player_info.weapon + player_info.action, true);
-    }
-    else if (pointer.isDown){   // If left mouse clicked
-        player_info.action = "attack";
+        player_info.action = "Move";
         player_sprite.play(player_info.weapon + player_info.action, true);
     }
     else {
-        player_sprite.setVelocity(0,0);
-        player_info.action = "idle";
+        player_info.action = "Idle";
         player_sprite.play(player_info.weapon + player_info.action, true);
     }
 
     // Make player look at mouse
+    // player_sprite.body.velocity.normalize().scale();
     player_sprite.rotation = Phaser.Math.Angle.BetweenPoints(player_sprite, this.input.activePointer);
 
 
 }
+
+//TODO: Make map large (procedural generation perhaps).
+//TODO: Randomly spawn weapons on map.
+//TODO: Fix knife attack animation.
 
 /* King of the Hill type game:
 

@@ -3,9 +3,9 @@ export default class player_stats{
         this.username = username;
         this.Xlocation = Xlocation;
         this.Ylocation = Ylocation;
-        this.weapon = "knife_";
+        this.weapon = "Knife";
         this.health = "100";
-        this.action="idle"
+        this.action="Idle"
     };
     computeDistance(x1, y1, x2, y2){
         return Math.sqrt((x2-x1)**2 + (y2-y1)**2)

@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1bd0dd96-2211-43e0-a78f-a09ef2bc63c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/model/player_class.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/model/player_stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/model/player_stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/model/player_stats.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/phaser_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/phaser_game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/test.scala" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,26 +18,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/phaser_game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="222" column="20" selection-start-line="222" selection-start-column="20" selection-end-line="222" selection-end-column="20" />
+            <state relative-caret-position="493">
+              <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/model/PhysicalObject.js">
+        <entry file="file://$PROJECT_DIR$/main/model/player_stats.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="170">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -47,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            <state relative-caret-position="119">
+              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -68,6 +57,7 @@
       <find>player</find>
       <find>player_info</find>
       <find>player_stats</find>
+      <find>norm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -98,7 +88,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -120,6 +111,12 @@
               <item name="koth" type="b2602c69:ProjectViewProjectNode" />
               <item name="koth" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="koth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="koth" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="koth" type="b2602c69:ProjectViewProjectNode" />
@@ -150,7 +147,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566242965489" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566256276213" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/main/tests.scala" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -186,37 +183,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Scala Script.Unnamed">
-    <configuration name="Scala Console" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console" temporary="true">
-      <setting name="vmparams4" value="-Djline.terminal=NONE" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="consoleArgs" value="-usejavacp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="ScalaScriptRunConfiguration" factoryName="Scala Script" nameIsGenerated="true">
-      <module name="koth" />
-      <setting name="path" value="C:\Users\Nitya\IdeaProjects\koth\main\tests.scala" />
-      <setting name="vmparams" value="" />
-      <setting name="consoleargs" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Node.js.bin\www" />
-      <item itemvalue="Scala Console.Scala Console" />
-      <item itemvalue="Scala Script.Unnamed" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Scala Console.Scala Console" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -235,7 +201,7 @@
       <workItem from="1564857371185" duration="1792000" />
       <workItem from="1564969954241" duration="10853000" />
       <workItem from="1565818224384" duration="1017000" />
-      <workItem from="1566139183647" duration="11068000" />
+      <workItem from="1566139183647" duration="21075000" />
     </task>
     <task id="LOCAL-00001" summary="updated clean-CSS node module">
       <created>1564365145048</created>
@@ -251,11 +217,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565135279589</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made structure more OOP-like.">
+      <created>1566243324905</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566243324921</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91566000" />
+    <option name="totallyTimeSpent" value="101573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,7 +243,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15506808" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2934947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -303,7 +276,7 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21028744" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15506808" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -343,24 +316,10 @@
     <MESSAGE value="update clean-CSS node module" />
     <MESSAGE value="updated clean-CSS node module" />
     <MESSAGE value="Added knife attack anims" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added knife attack anims" />
+    <MESSAGE value="Made structure more OOP-like." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made structure more OOP-like." />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach2_bm_02.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach2_bm_03.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach2_br.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach2_lm_01.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach2_lm_02.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -384,12 +343,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/ground.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/ground3.psd">
-      <provider selected="true" editor-type-id="layeredimageeditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/ground.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/decor/dirt_grass_hor_02.png">
       <provider selected="true" editor-type-id="images" />
@@ -424,9 +377,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/assets/FreeArt_GunConstructionKit_v03_show.svg">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main/assets/player/knife/move/survivor-move_knife_0.png">
       <provider selected="true" editor-type-id="images" />
@@ -526,10 +476,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/index.html">
+    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/decor.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/ground.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/ground3.psd">
+      <provider selected="true" editor-type-id="layeredimageeditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach2_br.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach2_tm_01.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach_bl_grass.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/assets/grass.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/assets/FreeArt_GunConstructionKit_v03_show.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/model/PhysicalObject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -540,24 +514,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/model/PhysicalObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/main/assets/hyptosis_tile-art-batch-1.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main/model/player_stats.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/phaser_game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="222" column="20" selection-start-line="222" selection-start-column="20" selection-end-line="222" selection-end-column="20" />
+        <state relative-caret-position="493">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
         </state>
       </provider>
     </entry>
