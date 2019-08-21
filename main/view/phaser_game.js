@@ -1,4 +1,4 @@
-import player_stats from './model/player_stats.js'
+import player_stats from '../model/player_stats.js'
 
 
 var config = {
@@ -80,12 +80,6 @@ function preload() {
 
 
 function create() {
-
-
-    player_sprite = this.physics.add.sprite(400, 300, 'init_player')
-        .setScale(0.25, 0.25)
-        .setVelocity(0, 0);
-    player_info = new player_stats('placeholder', player_sprite.x, player_sprite.y);
 
     this.anims.create({
         key: 'KnifeMove',
@@ -178,6 +172,12 @@ function create() {
         repeat: -1
     });
 
+    player_sprite = this.physics.add.sprite(400, 300, 'KnifeIdle')
+        .setScale(0.25, 0.25)
+        .setVelocity(0, 0);
+    player_info = new player_stats('placeholder', player_sprite.x, player_sprite.y);
+
+
 }
 
 
@@ -187,13 +187,9 @@ function update() {
     const cursors = this.input.keyboard.createCursorKeys();
     const pointer = this.input.activePointer;
     const keys = this.input.keyboard.addKeys('W,A,S,D');
-    const speed = 100;
+    const speed = 120;
 
-
-    // Reset velocity to 0 if no movement keys pressed
     player_sprite.body.setVelocity(0);
-    // player_sprite.play(player_info.weapon + player_info.action, true);
-
 
     // Horizontal movement
     if (cursors.left.isDown || keys.A.isDown) {
@@ -240,8 +236,10 @@ function update() {
         player_sprite.play(player_info.weapon + player_info.action, true);
     }
 
+    // Normalize speed so diagonal movement isn't faster
+    player_sprite.body.velocity.normalize().scale(speed);
+
     // Make player look at mouse
-    // player_sprite.body.velocity.normalize().scale();
     player_sprite.rotation = Phaser.Math.Angle.BetweenPoints(player_sprite, this.input.activePointer);
 
 
@@ -261,6 +259,7 @@ function update() {
 - player sprite - https://opengameart.org/content/animated-top-down-survivor-player
 - Guns on ground - CC0
 - Crosshairs - https://opengameart.org/content/20-crosshairs-for-re
+- Dungeon tileset - https://opengameart.org/content/dungeon-tileset
 - Zombies perhaps
 */
 //C:/Users/Nitya/IdeaProjects/Game2/main/assets/tp_sprite_sheets/player_move_knife.png
