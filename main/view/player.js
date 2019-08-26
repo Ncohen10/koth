@@ -1,4 +1,4 @@
-import player_stats from "../model/player_stats";
+import player_stats from "./player_stats.js";
 
 export default class Player {
     constructor(scene, x, y){
@@ -98,11 +98,12 @@ export default class Player {
         });
 
         this.sprite = scene.physics.add
-            .sprite(x, y, "KnifeIdle")
-            .setScale(0.25, 0.25)
-            .setVelocity(0, 0);
+            .sprite(x, y, "KnifeIdle", 0)
+            .setSize(22, 33)
+            .setOffset(23, 27);
 
-        this.keys = scene.input.keyboard.createCursorKeys()
+        this.keys = scene.input.keyboard.createCursorKeys();
+        this.input = scene.input;
     }
 
     freeze(){
@@ -111,7 +112,7 @@ export default class Player {
 
     update(){
         const player_sprite = this.sprite;
-        const cursors = input.keyboard.createCursorKeys();
+        const cursors = this.keys;
         const keys = input.keyboard.addKeys('W,A,S,D');
         const pointer = input.activePointer;
         const speed = 120;

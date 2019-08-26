@@ -1,4 +1,4 @@
-import player_stats from '../model/player_stats.js'
+import player_stats from './player_stats.js'
 
 
 var config = {

@@ -1,18 +1,18 @@
 {
   "name": "game2",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Better tile mapping for our dungeon",
+  "main": "index.html",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
   "dependencies": {
-    "clean-css": "^4.2.1",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "phaser": "^3.18.1",
-    "pug": "2.0.0-beta11"
-  }
+    "@mikewesthad/dungeon": "^1..2",
+    "phaser": "3.18.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
 }
