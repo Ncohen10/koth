@@ -9,50 +9,50 @@ export default class DungeonScene extends Phaser.Scene {
 
         this.load.image("map_stuff", './assets/example_dungeon.png');
         this.load.multiatlas('player_idle_knife',
-            '../assets/json_anims/knife_idle.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/knife_idle.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_move_knife',
-            '../assets/json_anims/knife_move.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/knife_move.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_attack_knife',
-            '../assets/json_anims/knife_attack.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/knife_attack.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_idle_rifle',
-            '../assets/json_anims/rifle_idle.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/rifle_idle.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_move_rifle',
-            '../assets/json_anims/rifle_move.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/rifle_move.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_shoot_rifle',
-            '../assets/json_anims/rifle_shoot.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/rifle_shoot.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_reload_rifle',
-            '../assets/json_anims/rifle_reload.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/rifle_reload.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_idle_pistol',
-            '../assets/json_anims/pistol_idle.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/pistol_idle.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_move_pistol',
-            '../assets/json_anims/pistol_move.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/pistol_move.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_shoot_pistol',
-            '../assets/json_anims/pistol_shoot.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/pistol_shoot.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_reload_pistol',
-            '../assets/json_anims/pistol_reload.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/pistol_reload.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_idle_shotgun',
-            '../assets/json_anims/shotgun_idle.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/shotgun_idle.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_move_shotgun',
-            '../assets/json_anims/shotgun_move.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/shotgun_move.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_shoot_shotgun',
-            '../assets/json_anims/shotgun_shoot.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/shotgun_shoot.json',
+            'assets/tp_sprite_sheets');
         this.load.multiatlas('player_reload_shotgun',
-            '../assets/json_anims/shotgun_reload.json',
-            '../assets/tp_sprite_sheets');
+            'assets/json_anims/shotgun_reload.json',
+            'assets/tp_sprite_sheets');
     }
 
     create() {

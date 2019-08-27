@@ -102,8 +102,9 @@ export default class Player {
             .setSize(22, 33)
             .setOffset(23, 27);
 
-        this.keys = scene.input.keyboard.createCursorKeys();
-        this.input = scene.input;
+        this.cursors = scene.input.keyboard.createCursorKeys();
+        this.keys = scene.input.keyboard.addKeys('W,A,S,D');
+        this.pointer = scene.input.activePointer;
     }
 
     freeze(){
@@ -112,15 +113,15 @@ export default class Player {
 
     update(){
         const player_sprite = this.sprite;
-        const cursors = this.keys;
-        const keys = input.keyboard.addKeys('W,A,S,D');
-        const pointer = input.activePointer;
+        const cursors = this.cursors;
+        const keys = this.keys;
+        const pointer = this.pointer;
         const speed = 120;
-        const prevVelocity = sprite.body.velocity.clone();
+        const prevVelocity = player_sprite.body.velocity.clone();
         var player_info = new player_stats('placeholder');
 
         // Stop previous movement from the last frame.
-        sprite.body.setVelocity(0);
+        player_sprite.body.setVelocity(0);
 
         // Horizontal movement
         if (cursors.left.isDown || keys.A.isDown) {
@@ -171,7 +172,7 @@ export default class Player {
         player_sprite.body.velocity.normalize().scale(speed);
 
         // Make player look at mouse
-        player_sprite.rotation = Phaser.Math.Angle.BetweenPoints(player_sprite, this.input.activePointer);
+        player_sprite.rotation = Phaser.Math.Angle.BetweenPoints(player_sprite, pointer);
 
     }
 
