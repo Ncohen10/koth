@@ -91,13 +91,13 @@ export default class DungeonScene extends Phaser.Scene {
         this.physics.add.collider(this.player.sprite, layer);
 
         // Phaser supports multiple cameras, but you can access the default camera like this:
-        const camera = this.cameras.main;
+        const camera = this.player.camera;
         camera.startFollow(this.player.sprite);
         camera.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
 
         // Help text that has a "fixed" position on the screen
         this.add
-            .text(16, 16, "Arrow keys to move", {
+            .text(16, 16, "Arrow keys or WASD to move", {
                 font: "18px monospace",
                 fill: "#000000",
                 padding: { x: 20, y: 10 },

@@ -9,7 +9,7 @@ export default class Player {
         anims.create({
             key: 'KnifeMove',
             frames: anims.generateFrameNames('player_move_knife'),
-            frameRate: 25,
+            frameRate: 20,
             repeat: -1
         });
         anims.create({
@@ -97,14 +97,13 @@ export default class Player {
             repeat: -1
         });
 
-        this.sprite = scene.physics.add
-            .sprite(x, y, "KnifeIdle", 0)
-            .setSize(22, 33)
-            .setOffset(23, 27);
-
         this.cursors = scene.input.keyboard.createCursorKeys();
         this.keys = scene.input.keyboard.addKeys('W,A,S,D');
         this.pointer = scene.input.activePointer;
+        this.camera = scene.cameras.main;
+        this.sprite = scene.physics.add
+            .sprite(x, y, "KnifeIdle", 0)
+            .setScale(0.20, 0.20);
     }
 
     freeze(){
@@ -112,13 +111,14 @@ export default class Player {
     }
 
     update(){
-        const player_sprite = this.sprite;
-        const cursors = this.cursors;
-        const keys = this.keys;
-        const pointer = this.pointer;
-        const speed = 120;
-        const prevVelocity = player_sprite.body.velocity.clone();
-        var player_info = new player_stats('placeholder');
+        const player_sprite = this.sprite,
+            cursors = this.cursors,
+            keys = this.keys,
+            pointer = this.pointer,
+            cameras = this.camera,
+            speed = 200,
+            prevVelocity = player_sprite.body.velocity.clone(),
+            player_info = new player_stats('placeholder', player_sprite.x, player_sprite.y);
 
         // Stop previous movement from the last frame.
         player_sprite.body.setVelocity(0);
@@ -144,12 +144,13 @@ export default class Player {
         }
 
         // Action animations
-        if (pointer.isDown){
+        if (pointer.isDown) {
             player_info.action = "Attack";
             player_sprite.play("Knife" + "Attack", true);
         }
         else if (cursors.left.isDown || keys.A.isDown) {
             player_info.action = "Move";
+            player_sprite.play(player_info.weapon + player_info.action, true);
         }
         else if (cursors.right.isDown || keys.D.isDown) {
             player_info.action = "Move";
@@ -172,7 +173,10 @@ export default class Player {
         player_sprite.body.velocity.normalize().scale(speed);
 
         // Make player look at mouse
-        player_sprite.rotation = Phaser.Math.Angle.BetweenPoints(player_sprite, pointer);
+        player_sprite.rotation = Phaser.Math.Angle.Between(player_sprite.x, player_sprite.y,
+            pointer.x + cameras.scrollX,
+            pointer.y + cameras.scrollY);
+        // player_sprite.rotation = Phaser.Math.Angle.BetweenPoints(player_sprite, pointer);
 
     }
 
