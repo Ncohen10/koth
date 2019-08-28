@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1bd0dd96-2211-43e0-a78f-a09ef2bc63c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/view/dungeon-scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/view/dungeon-scene.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/view/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/main/view/player.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,11 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/demo/dungeon-scene.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/view/dungeon-scene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="108" column="25" lean-forward="true" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+            <state relative-caret-position="121">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -27,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="476">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -39,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/view/player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+            <state relative-caret-position="444">
+              <caret line="166" column="41" lean-forward="true" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -77,6 +85,7 @@
       <find>tiles</find>
       <find>this.make.tile</find>
       <find>..</find>
+      <find>player_sprite</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -113,8 +122,8 @@
         <option value="$PROJECT_DIR$/main/demo/dungeon-scene.js" />
         <option value="$PROJECT_DIR$/main/index.html" />
         <option value="$PROJECT_DIR$/main/view/index.js" />
-        <option value="$PROJECT_DIR$/main/view/player.js" />
         <option value="$PROJECT_DIR$/main/view/dungeon-scene.js" />
+        <option value="$PROJECT_DIR$/main/view/player.js" />
       </list>
     </option>
   </component>
@@ -152,6 +161,12 @@
               <item name="koth" type="b2602c69:ProjectViewProjectNode" />
               <item name="koth" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="koth" type="b2602c69:ProjectViewProjectNode" />
+              <item name="koth" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -173,7 +188,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566954367536" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566957119230" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/main/tests.scala" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -231,7 +246,7 @@
       <workItem from="1566312791967" duration="10990000" />
       <workItem from="1566692196346" duration="4333000" />
       <workItem from="1566831341637" duration="7537000" />
-      <workItem from="1566924625905" duration="5720000" />
+      <workItem from="1566924625905" duration="8141000" />
     </task>
     <task id="LOCAL-00001" summary="updated clean-CSS node module">
       <created>1564365145048</created>
@@ -282,11 +297,18 @@
       <option name="project" value="LOCAL" />
       <updated>1566931477426</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed the sprite not following the mouse. Also changed sprite size.">
+      <created>1566954462120</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566954462120</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137729000" />
+    <option name="totallyTimeSpent" value="140150000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -311,7 +333,7 @@
       <window_info id="npm" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.32733223" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32569557" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -347,7 +369,9 @@
     <MESSAGE value="Changed game structure. Also added dungeon assets." />
     <MESSAGE value="Added demo for reference. Working on procedural generation of map.&#10;&#10;Source - https://itnext.io/modular-game-worlds-in-phaser-3-tilemaps-3-procedural-dungeon-3bc19b841cd" />
     <MESSAGE value="Got sprite to load in procedural dungeon. However, the sprite is now too big and doesn't follow the mouse properly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Got sprite to load in procedural dungeon. However, the sprite is now too big and doesn't follow the mouse properly." />
+    <MESSAGE value="Fixed the sprite not following the mouse. Also changed sprite size." />
+    <MESSAGE value="Cleaned up movement logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up movement logic." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main/assets/ground_tilesest/images/beach_tr_grass.png">
@@ -531,13 +555,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/demo/dungeon-scene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/view/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -552,27 +569,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/index.html">
+    <entry file="file://$PROJECT_DIR$/main/demo/dungeon-scene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/view/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="125" column="22" selection-start-line="125" selection-start-column="22" selection-end-line="125" selection-end-column="22" />
+        <state relative-caret-position="379">
+          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/view/dungeon-scene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="108" column="25" lean-forward="true" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
+        <state relative-caret-position="121">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/view/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="166" column="41" lean-forward="true" selection-start-line="166" selection-start-column="41" selection-end-line="166" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>

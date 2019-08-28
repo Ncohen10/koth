@@ -111,72 +111,60 @@ export default class Player {
     }
 
     update(){
-        const player_sprite = this.sprite,
+
+        const sprite = this.sprite,
             cursors = this.cursors,
             keys = this.keys,
             pointer = this.pointer,
             cameras = this.camera,
             speed = 200,
-            prevVelocity = player_sprite.body.velocity.clone(),
-            player_info = new player_stats('placeholder', player_sprite.x, player_sprite.y);
+            prevVelocity = sprite.body.velocity.clone(),
+            player_info = new player_stats('placeholder', sprite.x, sprite.y);
 
         // Stop previous movement from the last frame.
-        player_sprite.body.setVelocity(0);
+        sprite.body.setVelocity(0);
 
         // Horizontal movement
         if (cursors.left.isDown || keys.A.isDown) {
             player_info.action = "Move";
-            player_sprite.body.setVelocityX(-speed);
+            sprite.body.setVelocityX(-speed);
         }
         else if (cursors.right.isDown || keys.D.isDown) {
             player_info.action = "Move";
-            player_sprite.body.setVelocityX(speed);
+            sprite.body.setVelocityX(speed);
         }
 
         // Vertical movement
         if (cursors.up.isDown || keys.W.isDown) {
             player_info.action = "Move";
-            player_sprite.body.setVelocityY(-speed);
+            sprite.body.setVelocityY(-speed);
         }
         else if(cursors.down.isDown || keys.S.isDown) {
             player_info.action = "Move";
-            player_sprite.body.setVelocityY(speed);
+            sprite.body.setVelocityY(speed);
         }
 
-        // Action animations
+        // Update action and weapon animations and give attack animation highest precedence.
         if (pointer.isDown) {
-            player_info.action = "Attack";
-            player_sprite.play("Knife" + "Attack", true);
+            sprite.play("KnifeAttack", true);
         }
-        else if (cursors.left.isDown || keys.A.isDown) {
-            player_info.action = "Move";
-            player_sprite.play(player_info.weapon + player_info.action, true);
-        }
-        else if (cursors.right.isDown || keys.D.isDown) {
-            player_info.action = "Move";
-            player_sprite.play(player_info.weapon + player_info.action, true);
-        }
-        else if (cursors.up.isDown || keys.W.isDown) {
-            player_info.action = "Move";
-            player_sprite.play(player_info.weapon + player_info.action, true);
-        }
-        else if(cursors.down.isDown || keys.S.isDown) {
-            player_info.action = "Move";
-            player_sprite.play(player_info.weapon + player_info.action, true);
+        else if (cursors.left.isDown || cursors.right.isDown || cursors.up.isDown || cursors.down.isDown ||
+            keys.A.isDown || keys.D.isDown || keys.W.isDown || keys.S.isDown) {
+            sprite.play("KnifeMove", true);
         }
         else {
             player_info.action = "Idle";
-            player_sprite.play(player_info.weapon + player_info.action, true);
+            sprite.play(player_info.weapon + player_info.action, true);
         }
 
         // Normalize speed so diagonal movement isn't faster
-        player_sprite.body.velocity.normalize().scale(speed);
+        sprite.body.velocity.normalize().scale(speed);
 
         // Make player look at mouse
-        player_sprite.rotation = Phaser.Math.Angle.Between(player_sprite.x, player_sprite.y,
+        sprite.rotation = Phaser.Math.Angle.Between(
+            sprite.x, sprite.y,
             pointer.x + cameras.scrollX,
             pointer.y + cameras.scrollY);
-        // player_sprite.rotation = Phaser.Math.Angle.BetweenPoints(player_sprite, pointer);
 
     }
 
