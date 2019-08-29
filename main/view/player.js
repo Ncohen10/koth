@@ -144,17 +144,20 @@ export default class Player {
             sprite.body.setVelocityY(speed);
         }
 
-        // Update action and weapon animations and give attack animation highest precedence.
+        // Update action and weapon animations.
+        // Give attack animation highest precedence.
         if (pointer.isDown) {
             sprite.play("KnifeAttack", true);
         }
-        else if (cursors.left.isDown || cursors.right.isDown || cursors.up.isDown || cursors.down.isDown ||
-            keys.A.isDown || keys.D.isDown || keys.W.isDown || keys.S.isDown) {
-            sprite.play("KnifeMove", true);
-        }
         else {
-            player_info.action = "Idle";
-            sprite.play(player_info.weapon + player_info.action, true);
+            if (cursors.left.isDown || cursors.right.isDown || cursors.up.isDown || cursors.down.isDown ||
+                keys.A.isDown || keys.D.isDown || keys.W.isDown || keys.S.isDown) {
+                sprite.play("KnifeMove", true);
+            }
+            else {
+                player_info.action = "Idle";
+                sprite.play(player_info.weapon + player_info.action, true);
+            }
         }
 
         // Normalize speed so diagonal movement isn't faster
